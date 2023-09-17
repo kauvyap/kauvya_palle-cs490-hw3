@@ -15,6 +15,7 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/contact" page={ContactPage} name="contact" />
       <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
       <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost">
         <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
@@ -23,9 +24,10 @@ const Routes = () => {
         <Route path="/posts" page={PostPostsPage} name="posts" />
       </Set>
       <Set wrap={BlogLayout}>
-        <Route path="/article/{id}" page={ArticlePage} name="article" />
         <Route path="/about" page={AboutPage} name="about" />
+        <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/article/{id}" page={ArticlePage} name="article" />
       </Set>
       <Route notfound page={NotFoundPage} />
     </Router>
