@@ -1,5 +1,5 @@
 import { MetaTags } from '@redwoodjs/web'
-
+//this is the about page
 const AboutPage = () => {
   return (
     <>
